@@ -41,16 +41,17 @@ TARGET_PREBUILT_KERNEL := device/samsung/gts210wifixx/kernAl
 # Use this flag if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 
 # TWRP specific build flags
 DEVICE_RESOLUTION := 1920x1200
 RECOVERY_SDCARD_ON_DATA := true
-BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
-#TW_BRIGHTNESS_PATH := /sys/devices/platform/s5p-mipi-dsim.1/backlight/panel
 TW_BRIGHTNESS_PATH := /sys/devices/13800000.decon_fb/backlight/panel/brightness
 TW_MAX_BRIGHTNESS := 255
+RECOVERY_TOUCHSCREEN_SWAP_XY := true
+RECOVERY_TOUCHSCREEN_FLIP_Y := true
 TW_INTERNAL_STORAGE_PATH := "/data/media/0"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
@@ -59,3 +60,4 @@ TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_NO_EXFAT_FUSE := true
 TW_NO_EXFAT := true
+
